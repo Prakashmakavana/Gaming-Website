@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login Page</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+
+<div style="display: flex; justify-content: center ; align-items: center; flex-direction: column;">
+<h1>Login Form</h1>
+<form class="needs-validation" novalidate>
+<label for="validationCustom01" class="form-label">Enter Email</label>
+
+<input type="text" class="form-control" id="validationCustom01" required autocomplete="off">
+<div class="invalid-feedback"> Please Enter Email.
+</div>
+
+<label for="validationCustom02" class="form-label">Enter Password </label>
+
+<input type="password" class="form-control" id="validationCustom02" required autocomplete="off">
+<div class="invalid-feedback"> Please Enter Password.
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<script> 
+    (function () {
+    'use strict'
+	var forms = document.querySelectorAll('.needs-validation')	
+ 
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) { 
+        form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) { 
+            event.preventDefault() 
+            event.stopPropagation()
+}
+
+    form.classList.add('was-validated')
+    }, false)
+    })
+})()
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+</script>
+
+</body>
+
+</html>
+</body>
+</html>

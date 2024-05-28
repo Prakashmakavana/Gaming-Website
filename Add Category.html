@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="Boot_list.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Listing Page.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Admin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Game</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Racing & flying</a></li>
+                  <li><a class="dropdown-item" href="#">Card & board</a></li>
+                  <li><a class="dropdown-item" href="#">Action & adventure</a></li>
+                  <li><a class="dropdown-item" href="#">Puzzle & trivia</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-disabled="true">Logout</a>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+                Category</button>
+            </form>
+          </div>
+        </div>
+      </nav><br><br><br>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Category</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <label for="validationCustom01" class="form-label">Category Name: </label>
+                        <input type="text" class="form-control" id="validationCustom01" required autocomplete="off">
+                        <div class="invalid-feedback">
+                            Please Enter a Category Name.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="categoryTable">
+        <tr class="tableHead">
+            <th>Category</th>
+            <th>Number of product</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Racing & flying</td>
+            <td>800</td>
+            <td>
+                <button type="button" class="btn btn-primary " data-bstoggle="modal" data-bs-target="#head">
+                    Update
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Card & board</td>
+            <td>1000</td>
+            <td>
+                <button type="button" class="btn btn-primary " data-bstoggle="modal" data-bs-target="#head">
+                    Update
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Action & adventure</td>
+            <td>200</td>
+            <td>
+                <button type="button" class="btn btn-primary " data-bstoggle="modal" data-bs-target="#head">
+                    Update
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Puzzle & trivia</td>
+            <td>300</td>
+            <td>
+                <button type="button" class="btn btn-primary " data-bstoggle="modal" data-bs-target="#head">
+                    Update
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </table>
+    <div class="modal fade" id="head" tabindex="-1" arialabelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Update Category</h1>
+                    <button type="button" class="btn-close" data-bsdismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <label for="validationCustom01" class="formlabel">Category Name : </label>
+                        <input type="text" class="form-control" id="validationCustom01" required autocomplete="off">
+                        <div class="invalid-feedback">
+                            Please enter a valid category name.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
